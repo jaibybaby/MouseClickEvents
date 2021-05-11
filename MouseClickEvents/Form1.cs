@@ -35,7 +35,7 @@ namespace MouseClickEvents
             {
                 picBall.Location = new Point(picBall.Location.X , picBall.Location.Y);
             }
-
+           
         }
 
         private void btnClose_Click(object sender, EventArgs e)
