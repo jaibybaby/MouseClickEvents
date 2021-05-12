@@ -16,31 +16,36 @@ namespace MouseClickEvents
         {
             InitializeComponent();
         }
-
-
-        private void picBall_MouseClick(object sender, MouseEventArgs e)
-        {
-            int x = picBall.Location.X;
-            int y = picBall.Location.Y;
-            if (e.Button == MouseButtons.Left)
-            {
-                picBall.Location = new Point(picBall.Location.X-20,picBall.Location.Y);
-                // this.Clicks = picBall.Left;
-            }
-            if (e.Button == MouseButtons.Right)
-            {
-                picBall.Location = new Point(picBall.Location.X + 20, picBall.Location.Y);
-            }
-            if (e.Button == MouseButtons.Middle)
-            {
-                picBall.Location = new Point(picBall.Location.X , picBall.Location.Y);
-            }
-           
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            int x = picBall.Location.X;
+            int y = picBall.Location.Y;
+            if (x <= 450)
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    picBall.Location = new Point(picBall.Location.X + 20, picBall.Location.Y);
+                }
+                if (e.Button == MouseButtons.Middle)
+                {
+                    picBall.Location = new Point(249, 155);
+                }
+            }
+            if (x >= 25)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    picBall.Location = new Point(picBall.Location.X - 20, picBall.Location.Y);
+                }
+                if (e.Button == MouseButtons.Middle)
+                {
+                    picBall.Location = new Point(249, 155);
+                }
+            }
         }
     }
 }

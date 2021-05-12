@@ -30,79 +30,55 @@ namespace MouseClickEvents
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtHeading = new System.Windows.Forms.TextBox();
             this.picBall = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.picBall);
-            this.panel1.Location = new System.Drawing.Point(12, 103);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 417);
+            this.panel1.Size = new System.Drawing.Size(574, 427);
             this.panel1.TabIndex = 0;
-            // 
-            // txtHeading
-            // 
-            this.txtHeading.BackColor = System.Drawing.Color.Yellow;
-            this.txtHeading.Location = new System.Drawing.Point(12, 73);
-            this.txtHeading.Multiline = true;
-            this.txtHeading.Name = "txtHeading";
-            this.txtHeading.Size = new System.Drawing.Size(743, 33);
-            this.txtHeading.TabIndex = 0;
-            this.txtHeading.Text = "Running Ball";
-            this.txtHeading.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // picBall
             // 
             this.picBall.Image = global::MouseClickEvents.Properties.Resources.ball2;
-            this.picBall.Location = new System.Drawing.Point(347, 154);
+            this.picBall.Location = new System.Drawing.Point(250, 157);
+            this.picBall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBall.Name = "picBall";
-            this.picBall.Size = new System.Drawing.Size(120, 104);
+            this.picBall.Size = new System.Drawing.Size(90, 84);
             this.picBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBall.TabIndex = 2;
             this.picBall.TabStop = false;
-            this.picBall.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBall_MouseClick);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Yellow;
-            this.btnClose.Location = new System.Drawing.Point(751, 71);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(37, 35);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 555);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(574, 427);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtHeading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Running Ball";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtHeading;
         private System.Windows.Forms.PictureBox picBall;
-        private System.Windows.Forms.Button btnClose;
     }
 }
 
